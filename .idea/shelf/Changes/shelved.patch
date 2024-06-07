@@ -1,0 +1,485 @@
+Index: task_72.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/task_72.py b/task_72.py
+new file mode 100644
+--- /dev/null	(date 1717430547952)
++++ b/task_72.py	(date 1717430547952)
+@@ -0,0 +1,6 @@
++subj = ["Математика", "Химия", "Физика", "Литература", "Музыка"]
++for i in subj:
++    print(i)
++# subj.remove(input("Какой предмет 1 удалить?: "))
++# subj.remove(input("Какой предмет 2 удалить?: "))
++print(sorted(subj)[1:3])
+Index: task_76.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/task_76.py b/task_76.py
+new file mode 100644
+--- /dev/null	(date 1717431656985)
++++ b/task_76.py	(date 1717431656985)
+@@ -0,0 +1,11 @@
++guests = []
++count = 1
++for i in range(1, 3):
++    guests.append(input(f"Введите имя{i}: "))
++while count == 1:
++    new_guest = input("Хотите еще добавить? да/нет ").lower()
++    if new_guest == "нет":
++        count = 0
++    else:
++        guests.append(input(f"Введите новое имя: "))
++print(len(guests))
+Index: task_77.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/task_77.py b/task_77.py
+new file mode 100644
+--- /dev/null	(date 1717437604061)
++++ b/task_77.py	(date 1717437604061)
+@@ -0,0 +1,13 @@
++guests = []
++count = 1
++for i in range(1, 3):
++    guests.append(input(f"Введите имя{i}: "))
++while count == 1:
++    new_guest = input("Хотите еще добавить? да/нет ").lower()
++    if new_guest == "нет":
++        count = 0
++    else:
++        guests.append(input(f"Введите новое имя: "))
++print(f"Всего {len(guests)} гостей.")
++for i in guests:
++    print(f"{guests.index(i)+1} - {guests[guests.index(i)]}")
+Index: task_81.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/task_81.py b/task_81.py
+new file mode 100644
+--- /dev/null	(date 1717438246564)
++++ b/task_81.py	(date 1717438246564)
+@@ -0,0 +1,9 @@
++msg = input("Введите слово ПОЛНОСТЬЮ ЗАГЛАВНЫМИ: ")
++tryagain = True
++while tryagain == True:
++    if msg.isupper():
++        print("Все верно!")
++        tryagain = False
++    else:
++        print("Внимательней! Попробуйте еще раз! ")
++        msg = input("Введите слово ПОЛНОСТЬЮ ЗАГЛАВНЫМИ: ")
+\ No newline at end of file
+Index: task_87.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/task_87.py b/task_87.py
+new file mode 100644
+--- /dev/null	(date 1717440024713)
++++ b/task_87.py	(date 1717440024713)
+@@ -0,0 +1,5 @@
++msg = input("Введите слово: ")
++num = 1
++for i in msg:
++    print(msg[len(msg)-num])
++    num = num+1
+Index: task_88.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/task_88.py b/task_88.py
+new file mode 100644
+--- /dev/null	(date 1717473804056)
++++ b/task_88.py	(date 1717473804056)
+@@ -0,0 +1,11 @@
++from array import *
++nums = array('i', [])
++for i in range(1, 6):
++    us_nums = int(input(f"Введите {i} число: "))
++    nums.append(us_nums)
++print("Изначальный массив: ", nums)
++sortnums = sorted(nums)
++print("Сортированный массив: ", sortnums)
++nums.reverse()
++# print("Перевернутый начальный массив: ", nums)
++print("Перевернутый отсортированный массив: ", nums)
+Index: task_89.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/task_89.py b/task_89.py
+new file mode 100644
+--- /dev/null	(date 1717473804047)
++++ b/task_89.py	(date 1717473804047)
+@@ -0,0 +1,9 @@
++from array import *
++import random
++
++nums = array('i', [])
++for i in range(1, 6):
++    r_num = random.randrange(0, 10)
++    nums.append(r_num)
++for i in nums:
++    print(i)
+\ No newline at end of file
+Index: task_90.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/task_90.py b/task_90.py
+new file mode 100644
+--- /dev/null	(date 1717474663754)
++++ b/task_90.py	(date 1717474663754)
+@@ -0,0 +1,18 @@
++from array import *
++# import random
++
++nums = array('i', [])
++print("Введите число от 10 до 20")
++for i in range(1, 6):
++    tryagain = True
++    while tryagain:
++        us_num = int(input(f"Введите {i} число: "))
++        if us_num < 10 or us_num > 20:
++            print("Число за пределами.")
++        else:
++            nums.append(us_num)
++            tryagain = False
++
++print("Спасибо.")
++for i in nums:
++    print(i)
+Index: .idea/PyLearn_NLacey.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/PyLearn_NLacey.iml b/.idea/PyLearn_NLacey.iml
+new file mode 100644
+--- /dev/null	(date 1717058961092)
++++ b/.idea/PyLearn_NLacey.iml	(date 1717058961092)
+@@ -0,0 +1,10 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="PYTHON_MODULE" version="4">
++  <component name="NewModuleRootManager">
++    <content url="file://$MODULE_DIR$">
++      <excludeFolder url="file://$MODULE_DIR$/.venv" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: .idea/inspectionProfiles/profiles_settings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/inspectionProfiles/profiles_settings.xml b/.idea/inspectionProfiles/profiles_settings.xml
+new file mode 100644
+--- /dev/null	(date 1717058961124)
++++ b/.idea/inspectionProfiles/profiles_settings.xml	(date 1717058961124)
+@@ -0,0 +1,6 @@
++<component name="InspectionProjectProfileManager">
++  <settings>
++    <option name="USE_PROJECT_PROFILE" value="false" />
++    <version value="1.0" />
++  </settings>
++</component>
+\ No newline at end of file
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+new file mode 100644
+--- /dev/null	(date 1717058961105)
++++ b/.idea/modules.xml	(date 1717058961105)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/.idea/PyLearn_NLacey.iml" filepath="$PROJECT_DIR$/.idea/PyLearn_NLacey.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+new file mode 100644
+--- /dev/null	(date 1717058961116)
++++ b/.idea/misc.xml	(date 1717058961116)
+@@ -0,0 +1,7 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="Black">
++    <option name="sdkName" value="Python 3.12 (PyLearn_NLacey)" />
++  </component>
++  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.12 (PyLearn_NLacey)" project-jdk-type="Python SDK" />
++</project>
+\ No newline at end of file
+Index: task12.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/task12.py b/task12.py
+new file mode 100644
+--- /dev/null	(date 1717059228406)
++++ b/task12.py	(date 1717059228406)
+@@ -0,0 +1,5 @@
++a=int(input("Введите 1 число: "))
++b=int(input("Введите 2 число: "))
++if a>b:
++    print(f"{b}\n{a}")
++else: print(f"{a}\n{b}")
+\ No newline at end of file
+Index: .idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+new file mode 100644
+--- /dev/null	(date 1717058961204)
++++ b/.idea/.gitignore	(date 1717058961204)
+@@ -0,0 +1,3 @@
++# Default ignored files
++/shelf/
++/workspace.xml
+Index: task_15.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/task_15.py b/task_15.py
+new file mode 100644
+--- /dev/null	(date 1717059608344)
++++ b/task_15.py	(date 1717059608344)
+@@ -0,0 +1,5 @@
++in_colour = input("Введите ваш цвет: ")
++if str.lower(in_colour)=="красный":
++    print(f"Я тоже люблю {in_colour} цвет.")
++else:
++    print(f"Я не люблю {in_colour}. Я люблю Красный.")
+\ No newline at end of file
+Index: task_21.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/task_21.py b/task_21.py
+new file mode 100644
+--- /dev/null	(date 1717075591629)
++++ b/task_21.py	(date 1717075591629)
+@@ -0,0 +1,4 @@
++firstname = input("Введите имя: ")
++surname = input("Введите фамилию: ")
++name = surname + " " + firstname
++print(f"{name}\nДлина - {len(name)}")
+\ No newline at end of file
+Index: task_26.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/task_26.py b/task_26.py
+new file mode 100644
+--- /dev/null	(date 1717077781182)
++++ b/task_26.py	(date 1717077781182)
+@@ -0,0 +1,8 @@
++word = input("Введите слово: ")
++first_letter = word[0].lower()
++glasn = ["а","е","ё","и","о","у","ы","э","ю","я"]
++if first_letter in glasn:
++    pig_word = word+"вэй"
++else:
++    pig_word = word[1:len(word)]+first_letter+"эй"
++print(pig_word)
+\ No newline at end of file
+Index: task_30.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/task_30.py b/task_30.py
+new file mode 100644
+--- /dev/null	(date 1717078013023)
++++ b/task_30.py	(date 1717078013023)
+@@ -0,0 +1,2 @@
++import math
++print(round(math.pi,4))
+\ No newline at end of file
+Index: task_34.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/task_34.py b/task_34.py
+new file mode 100644
+--- /dev/null	(date 1717078428435)
++++ b/task_34.py	(date 1717078428435)
+@@ -0,0 +1,12 @@
++import math
++print("1-квадрат\n2-треугольник")
++choice = int(input("Сделайте выбор: "))
++if choice==1:
++    sq_len=int(input("Введите длину стороны квадрата: "))
++    print(f"Площать квадрата = {sq_len**2}")
++elif choice==2:
++    tr_len=int(input("Введите длину стороны треугольника: "))
++    tr_high = int(input("Введите высоту треугольника: "))
++    print(f"Площадь треугольника = {tr_len*tr_high/2}")
++else:
++    print("Вы сделали неправильный выбор.")
+Index: task_49.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/task_49.py b/task_49.py
+new file mode 100644
+--- /dev/null	(date 1717079755465)
++++ b/task_49.py	(date 1717079755465)
+@@ -0,0 +1,10 @@
++compnum = 50
++count=1
++num = int(input("Введите число: "))
++while num !=compnum:
++    if num>compnum:
++        print(f"Слишком большое.")
++    else:print(f"Слишком маленькое.")
++    num = int(input("Введите число: "))
++    count = count+1
++print(f"Вы угадали число с {count} попытки.")
+\ No newline at end of file
+Index: task_55.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/task_55.py b/task_55.py
+new file mode 100644
+--- /dev/null	(date 1717092784677)
++++ b/task_55.py	(date 1717092784677)
+@@ -0,0 +1,15 @@
++import random
++r_num = random.randrange(0,5)
++choice = int(input("Введите число от 1 до 5: "))
++if choice == r_num:
++    print("Вы угадали!")
++    exit()
++elif choice>r_num:
++        print("Ваше число больше загаданного. Выберите меньше.")
++else:
++    print("Ваше число меньше загаданного. Выберите больше")
++choice = int(input("Введите число от 1 до 5: "))
++if choice == r_num:
++    print("Вы угадали!")
++else:
++    print("Вы не угадали!")
+Index: task_57.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/task_57.py b/task_57.py
+new file mode 100644
+--- /dev/null	(date 1717433218719)
++++ b/task_57.py	(date 1717433218719)
+@@ -0,0 +1,13 @@
++import random
++correct = False
++r_num = random.randrange(0, 10)
++print(r_num)
++while correct == False:
++    choice = int(input("Введите число от 1 до 10: "))
++    if choice == r_num:
++        print("Вы угадали!")
++        correct=True
++    elif choice>r_num:
++            print("Ваше число больше загаданного. Выберите меньше.")
++    else:
++        print("Ваше число меньше загаданного. Выберите больше")
+Index: task_turtle_test.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/task_turtle_test.py b/task_turtle_test.py
+new file mode 100644
+--- /dev/null	(date 1717415480927)
++++ b/task_turtle_test.py	(date 1717415480927)
+@@ -0,0 +1,7 @@
++import turtle
++for i in range(0, 5):
++    turtle.right(60)
++    for j in range(0, 3):
++        turtle.forward(100)
++        turtle.right(60)
++turtle.exitonclick()
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+new file mode 100644
+--- /dev/null	(date 1717131223852)
++++ b/.idea/vcs.xml	(date 1717131223852)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: task_69.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/task_69.py b/task_69.py
+new file mode 100644
+--- /dev/null	(date 1717417568651)
++++ b/task_69.py	(date 1717417568651)
+@@ -0,0 +1,5 @@
++country = ("USA", "Russia", "China", "Germany", "Italy")
++print(country)
++choice = input("Enter country: ")
++if choice in country:
++    print(f"Ваша страна № {country.index(choice)}")
+Index: task_71.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/task_71.py b/task_71.py
+new file mode 100644
+--- /dev/null	(date 1717430025611)
++++ b/task_71.py	(date 1717430025611)
+@@ -0,0 +1,4 @@
++sport = ["Баскетбол", "Футбол", "Хоккей"]
++print(sport)
++sport.append(input("Введите еще один вид спорта: "))
++print(sorted(sport))
